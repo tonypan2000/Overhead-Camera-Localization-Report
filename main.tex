@@ -1,21 +1,15 @@
-\documentclass[man]{apa6}
-\usepackage[american]{babel}
-\usepackage{csquotes}
-\usepackage[style=apa,
-sortcites=true,
-sorting=nyt,
-backend=biber]{biblatex}
-\DeclareLanguageMapping{american}{american-apa}
-\addbibresource{bibliography.bib}
+\documentclass[jou,apacite]{apa6}
 
 \title{Reducing Cumulative Odometry Error with Overhead Camera Localization in the Soar Cognitive Architecture}
-\author{Minxing Pan, Nicholas C. Matton}
+\author{Minxing Pan and Nicholas C. Matton}
 \affiliation{The University of Michigan}
 \shorttitle{Overhead Camera Localization}
 
 \abstract{ Abstract, todo }
-
 \keywords{robot mapping, localization, linear algebra, computer vision}
+
+\rightheader{Overhead Camera Localization}
+\leftheader{Pan and Matton}
 
 \begin{document}
 \maketitle
@@ -41,7 +35,7 @@ The Logitech HD Pro Webcam C920, Widescreen Video Calling and Recording, 1080p C
 The OpenCV library provides a function to calculate the distortion coefficients needed to correct the images with a calibration process using a checkerboard image. In this project, a nine by six monochromatic checkerboard image provided by OpenCV was used to calibrate the camera. Our program collects a stack of 100 different images of the checkerboard at different angles and distances to the camera. Then our program uses the OpenCV function of calibrating the camera to calculate the distortion coefficients. 
 After calibrating the camera once in the lab environment with ambient lighting, the calibration data can be used to undistort new images streamed by the camera prior to any further image processing.
 
-\subsubsection{Pose Estimation}
+\subsection{Pose Estimation}
 
 Since cumulative odometry drift causes the Cozmo origin to deviate, there needs to be a reliable method to estimate the robot pose and recalibrate the Cozmo origin. Pose estimation can be done based on finding correspondences between objects in the real world and their two-dimensional image taken by the camera (Bradski, 2000). While one could estimate robot pose with a multi-objective Convolutional Neural Network, that process requires hundreds of robot images for training (Miseikis, 2018).
 
@@ -75,7 +69,9 @@ Our code encapsulates the said functionality in a Camera Localizer class in Pyth
 
 \section{Results}
 
-\section{Discussion}
 
-\printbibliography
+\section{Discussion}
+fuck this worked!!!!\cite{Einstein}
+\bibliography{bib}
+
 \end{document}
