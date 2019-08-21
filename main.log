@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.7)  20 AUG 2019 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.7)  21 AUG 2019 00:08
 entering extended mode
 **./main.tex
 (main.tex
@@ -390,48 +390,68 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 59.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
+(Font)                  U/txsya/m/n --> U/msa/m/n on input line 59.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/txsya/bx/n --> U/msa/m/n on input line 59.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 60.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
+(Font)                  U/txsyb/m/n --> U/msb/m/n on input line 60.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/txsyb/bx/n --> U/msb/m/n on input line 60.
+LaTeX Font Info:    Redeclaring math delimiter \ulcorner on input line 74.
+LaTeX Font Info:    Redeclaring math delimiter \urcorner on input line 75.
+LaTeX Font Info:    Redeclaring math delimiter \llcorner on input line 76.
+LaTeX Font Info:    Redeclaring math delimiter \lrcorner on input line 77.
+LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
+LaTeX Font Info:    Redeclaring math symbol \lozenge on input line 142.
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 15.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 15.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 16.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 16.
 
 
 ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\omltxmi.fd
 "
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 15.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 15.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 16.
 
 
 ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\omstxsy.fd
 "
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 15.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 15.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 16.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 16.
 
 
 ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\omxtxex.fd
 "
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 15.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 15.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 16.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 16.
 
 ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\utxexa.fd"
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Try loading font information for T1+txr on input line 15.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Try loading font information for T1+txr on input line 16.
  ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\t1txr.fd"
 File: t1txr.fd 2000/12/15 v3.1
 )
@@ -557,61 +577,60 @@ File: APAamerican.txt 2012/02/23 v1.25 apa6 configuration for American English
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 16.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 17.
 
 ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\ot1txr.fd"
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 16.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 17.
  ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\utxmia.fd
 "
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 16.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
 
-("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\utxsya.fd"
-File: utxsya.fd 2000/12/15 v3.1
+("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 16.
- ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\utxsyb.fd
-"
-File: utxsyb.fd 2000/12/15 v3.1
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 16.
-
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 17.
 ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\utxsyc.fd"
 File: utxsyc.fd 2000/12/15 v3.1
 ) [1{C:/Users/tonyp/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-[2] (main.bbl)
+[2] (main.bbl [3])
 - LAST -
-Extra skip:1.26086pt
-Left:515.61194pt/2.165pt
-Right:514.56757pt/1.9485pt
-Output:516.08975pt
- [3] (main.aux) ) 
+Extra skip:17.45676pt
+Left:27.45676pt/1.9485pt
+Right:10.0pt/1.9485pt
+Output:19.22838pt
+ [4] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 5998 strings out of 492972
- 85978 string characters out of 3126623
- 172265 words of memory out of 3000000
- 9735 multiletter control sequences out of 15000+200000
- 42890 words of font info for 82 fonts, out of 3000000 for 9000
+ 6021 strings out of 492972
+ 86399 string characters out of 3126623
+ 164670 words of memory out of 3000000
+ 9750 multiletter control sequences out of 15000+200000
+ 42809 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,7n,50p,1253b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,7n,40p,961b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
 ips/base/8r.enc}<C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/txfonts/rtxr.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/txfonts/txex.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/txfonts/txmia.pfb><C:/Users/tonyp/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tonyp/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/tonyp/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/tonyp/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 66557 bytes).
+ublic/txfonts/rtxmi.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/txfonts/rtxr.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/txfonts/txex.pfb><C:/Users/tonyp/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/txfonts/txmia.pfb><C:/Users/tonyp/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tonyp/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/tonyp/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/tonyp/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (4 pages, 68621 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
