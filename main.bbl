@@ -1,28 +1,296 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-Pan%
+Anki%
 }{%
-Pan%
+Anki%
 }{%
-{\protect \APACyear {3000}}%
+{\protect \APACyear {2016}}%
 }]{%
-Pan}
+Anki}
 \APACinsertmetastar {%
-Pan}%
+Anki}%
 \begin{APACrefauthors}%
-Pan, T.%
+Anki.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{3000}{}{}.
+\APACrefYearMonthDay{2016}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Why dumbasses are stupid}. ({Martian}) [{On} lol]}
-  {{Why dumbasses are stupid}. ({Martian}) [{On} lol]}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Cozmo SDK} {Cozmo sdk}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
 \newblock
-\APACjournalVolNumPages{playboy}{420}{49}{101-101}.
+\APACaddressPublisher{http://cozmosdk.anki.com/docs}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Boggs%
+}{%
+Boggs%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+Boggs}
+\APACinsertmetastar {%
+Boggs}%
+\begin{APACrefauthors}%
+Boggs, J.%
+\end{APACrefauthors}%
+\unskip\
 \newblock
-\begin{APACrefDOI} \doi{http://localhost} \end{APACrefDOI}
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Cozmo-Soar Interface} {Cozmo-soar interface}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{https://github.com/JBoggsy/CozmoSoar/}{GitHub}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Borenstein}%
+\ \BBA {} {Feng}%
+}{%
+{Borenstein}%
+\ \BBA {} {Feng}%
+}{%
+{\protect \APACyear {1996}}%
+}]{%
+Borenstein}
+\APACinsertmetastar {%
+Borenstein}%
+\begin{APACrefauthors}%
+{Borenstein}, J.%
+\BCBT {}\ \BBA {} {Feng}, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{Dec}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Measurement and correction of systematic odometry errors
+  in mobile robots} {Measurement and correction of systematic odometry errors
+  in mobile robots}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions on Robotics and
+  Automation}{12}{6}{869-880}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/70.544770} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bradski%
+}{%
+Bradski%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+OpenCV}
+\APACinsertmetastar {%
+OpenCV}%
+\begin{APACrefauthors}%
+Bradski, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The OpenCV Library}} {{The OpenCV Library}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Dr. Dobb's Journal of Software Tools}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Kleeman}%
+}{%
+{Kleeman}%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+Kleeman}
+\APACinsertmetastar {%
+Kleeman}%
+\begin{APACrefauthors}%
+{Kleeman}, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{Oct}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Advanced sonar and odometry error modeling for
+  simultaneous localisation and map building} {Advanced sonar and odometry
+  error modeling for simultaneous localisation and map building}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings 2003 IEEE/RSJ International Conference on
+  Intelligent Robots and Systems (IROS 2003) (Cat. No.03CH37453)} {Proceedings
+  2003 ieee/rsj international conference on intelligent robots and systems
+  (iros 2003) (cat. no.03ch37453)}\ (\BVOL~1, \BPG~699-704 vol.1).
+\newblock
+\begin{APACrefDOI} \doi{10.1109/IROS.2003.1250711} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Laird%
+}{%
+Laird%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Laird}
+\APACinsertmetastar {%
+Laird}%
+\begin{APACrefauthors}%
+Laird, J\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2012}.
+\newblock
+\APACrefbtitle {The Soar Cognitive Architecture} {The soar cognitive
+  architecture}.
+\newblock
+\APACaddressPublisher{}{The MIT Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mallick%
+}{%
+Mallick%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Mallick}
+\APACinsertmetastar {%
+Mallick}%
+\begin{APACrefauthors}%
+Mallick, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{June}{}.
+\newblock
+\APACrefbtitle {Rotation Matrix To Euler Angles.} {Rotation matrix to euler
+  angles.}
+\newblock
+\APACaddressPublisher{https://www.learnopencv.com/rotation-matrix-to-euler-angles/}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mininger%
+}{%
+Mininger%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+Mininger}
+\APACinsertmetastar {%
+Mininger}%
+\begin{APACrefauthors}%
+Mininger, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {PySoarLib} {Pysoarlib}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{https://github.com/amininger/pysoarlib}{GitHub}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Miseikis%
+\ \protect \BOthers {.}}{%
+Miseikis%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Miseikis}
+\APACinsertmetastar {%
+Miseikis}%
+\begin{APACrefauthors}%
+Miseikis, J.%
+, Kn{\"{o}}belreiter, P.%
+, Brijacak, I.%
+, Yahyanejad, S.%
+, Glette, K.%
+, Elle, O\BPBI J.%
+\BCBL {}\ \BBA {} T{\o}rresen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Robot Localisation and 3D Position Estimation Using a
+  Free-Moving Camera and Cascaded Convolutional Neural Networks} {Robot
+  localisation and 3d position estimation using a free-moving camera and
+  cascaded convolutional neural networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{CoRR}{abs/1801.02025}{}{}.
+\newblock
+\begin{APACrefURL} \url{http://arxiv.org/abs/1801.02025} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Romero~Ramirez%
+, Muñoz-Salinas%
+\BCBL {}\ \BBA {} Medina-Carnicer%
+}{%
+Romero~Ramirez%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Garrido-Jurado}
+\APACinsertmetastar {%
+Garrido-Jurado}%
+\begin{APACrefauthors}%
+Romero~Ramirez, F.%
+, Muñoz-Salinas, R.%
+\BCBL {}\ \BBA {} Medina-Carnicer, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{06}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Speeded Up Detection of Squared Fiducial Markers}
+  {Speeded up detection of squared fiducial markers}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Image and Vision Computing}{76}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.imavis.2018.05.004} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Se}%
+, {Lowe}%
+\BCBL {}\ \BBA {} {Little}%
+}{%
+{Se}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2001}}%
+}]{%
+se}
+\APACinsertmetastar {%
+se}%
+\begin{APACrefauthors}%
+{Se}, S.%
+, {Lowe}, D.%
+\BCBL {}\ \BBA {} {Little}, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2001}{Oct}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Local and global localization for mobile robots using
+  visual landmarks} {Local and global localization for mobile robots using
+  visual landmarks}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings 2001 IEEE/RSJ International Conference on
+  Intelligent Robots and Systems. Expanding the Societal Role of Robotics in
+  the the Next Millennium (Cat. No.01CH37180)} {Proceedings 2001 ieee/rsj
+  international conference on intelligent robots and systems. expanding the
+  societal role of robotics in the the next millennium (cat. no.01ch37180)}\
+  (\BVOL~1, \BPG~414-420 vol.1).
+\newblock
+\begin{APACrefDOI} \doi{10.1109/IROS.2001.973392} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

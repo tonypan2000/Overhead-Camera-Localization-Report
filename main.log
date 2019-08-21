@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.7)  21 AUG 2019 00:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.7)  21 AUG 2019 13:14
 entering extended mode
 **./main.tex
 (main.tex
@@ -603,34 +603,43 @@ File: utxsyc.fd 2000/12/15 v3.1
 
 
 ]
-[2] (main.bbl [3])
+[2] (main.bbl [3]
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 229.
+
+
+("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\t1txtt.fd"
+File: t1txtt.fd 2000/12/15 v3.1
+))
 - LAST -
-Extra skip:17.45676pt
-Left:27.45676pt/1.9485pt
-Right:10.0pt/1.9485pt
-Output:19.22838pt
+Extra skip:0.4815pt
+Left:186.0pt/1.9485pt
+Right:186.0pt/1.467pt
+Output:186.5pt
  [4] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 6021 strings out of 492972
- 86399 string characters out of 3126623
- 164670 words of memory out of 3000000
- 9750 multiletter control sequences out of 15000+200000
- 42809 words of font info for 82 fonts, out of 3000000 for 9000
+ 6085 strings out of 492972
+ 87251 string characters out of 3126623
+ 165584 words of memory out of 3000000
+ 9810 multiletter control sequences out of 15000+200000
+ 43131 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,7n,40p,961b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,7n,40p,969b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
 ips/base/8r.enc}<C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/txfonts/rtxmi.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/txfonts/rtxr.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/txfonts/txex.pfb><C:/Users/tonyp/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/txfonts/txmia.pfb><C:/Users/tonyp/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tonyp/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/tonyp/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/tonyp/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 68621 bytes).
+ublic/txfonts/rtxi.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/txfonts/rtxmi.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/tonyp/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/tonyp/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/txfonts/txex.pfb><C:/Users/tonyp/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/txmia.pfb><C:/Users/tonyp/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/t
+onyp/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Use
+rs/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
+/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on main.pdf (4 pages, 83111 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
