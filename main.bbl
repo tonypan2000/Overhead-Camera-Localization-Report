@@ -99,6 +99,29 @@ Bradski, G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Bretscher%
+}{%
+Bretscher%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+Bretscher}
+\APACinsertmetastar {%
+Bretscher}%
+\begin{APACrefauthors}%
+Bretscher, O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Linear Algebra with Applications} {Linear algebra with
+  applications}\ (\PrintOrdinal{5th edition}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Pearson}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 {Kleeman}%
 }{%
 {Kleeman}%

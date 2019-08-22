@@ -1,0 +1,14 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics[width=\linewidth]{rotation_difference.jpg}
+\caption{The same vector represented by the coordinates [$\frac{1}{\sqrt2}$, $\frac{1}{\sqrt2}$] in the standard coordinate system is represented by the coordinates [0, 1] in a rotated coordinate system}
+\label{fig:rotdiff}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics[width=\linewidth]{origin_difference.jpg}
+\caption{The Cozmo origin is not at the same coordinates as the world origin, so a vector in either coordinate system also needs to be translated so that it is relative to the corresponding origin. This can be achieved by keeping track of the Cozmo origin's position relative to the world origin in the origin difference vector $V_d$}
+\label{fig:oridiff}
+\end{figure*}

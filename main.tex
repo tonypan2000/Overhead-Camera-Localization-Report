@@ -1,6 +1,8 @@
 \documentclass[jou,apacite]{apa6}
 \usepackage{amsmath}
 \usepackage{amsfonts} 
+\usepackage{graphicx}
+\usepackage{subcaption}
 
 \title{Reducing Global Cumulative Odometry Error with Overhead Camera Localization in the Soar Cognitive Architecture}
 \author{Minxing Pan and Nicholas C. Matton}
@@ -26,7 +28,7 @@ In addition to the nav map, Cozmo relies on odometry to estimate its position an
 In Cozmo odometry, the perceived travel distance is based on the encoder values of the motors, and the actual travel distance is the displacement of Cozmo relative its previous position. Some of the systematic odometry errors include “unequal wheel diameters” and the “misalignment of wheels” \cite{Borenstein}. Because Cozmo drives with treads, the horizontal instability of the treads while driving contributes to the misalignment. The wear and tear of tread on either side causes unequal diameters. Consequently, the Cozmo odometry can be inaccurate. For example, when Cozmo turns, Cozmo’s perceived sensorimotor data can be a few degrees different from the actual travel data. This cumulation in odometry drift causes the Cozmo origin to deviate, leading to an inconsistent perceived robot pose with regards to the actual robot pose. The cumulative odometry error causes problems in robot exploration and navigation over time.
 
 Our project runs programs controlling the Cozmo robots on the Soar Cognitive Architecture. “Soar is a general cognitive architecture that integrates knowledge-intensive reasoning, reactive execution, hierarchical reasoning, planning, and learning from experience, with the goal of creating a general computational system that has the same cognitive abilities as humans” 
-\cite{Laird}. Our program uses the Cozmo-Soar Interface to interact with the Cozmo robots. The Cozmo-Soar Interface is a python-based interface between Soar and Cozmo based on the Soar Markup Language (SML), PySoarLib, and the Cozmo SDK \cite{Mininger}. “The purpose of the interface is to allow a Soar agent to control a fully-embodied Cozmo robot, thereby embodying the Soar agent in the real world and enabling cognitive experiments to be run on a small, flexible, and robust platform” \cite{Boggs}.
+\cite{Laird}. Our program uses the Cozmo-Soar Interface to interact with the Cozmo robots. The Cozmo-Soar Interface is a python-based interface between Soar and Cozmo based on the Soar Markup Language (SML), PySoarLib, and the Cozmo SDK \cite{Mininger}. “The purpose of the interface is to allow a Soar agent to control a fully-embodied Cozmo robot, thereby embodying the Soar agent in the real world and enabling cognitive experiments to be run on a small, flexible, and robust platform” \cite{Boggs}. One of the research goals of CozmoSoar is interactive task learning, specifically training the Cozmo robots new tasks through natural language instruction. The movement and navigation in said programs require a global coordinate frame, but the Cozmo odometry error made it too inaccurate (Miniger, 2019). Therefore, we need to come up with a method to reduce the cumulative odometry error in Cozmo in a global coordinate frame.
 
 
 \section{Method}
@@ -53,51 +55,120 @@ After the calculation of the translation and rotation vectors of the robot pose 
 \subsection{Linear Transformations}
 A method to acquire the real time robot pose in the world coordinate system has been established so far. Cozmo, however, has its own coordinate system described in the Introduction section. Our program can convert to and from the two coordinate systems.
 
-First we will explain some common Linear algebra terms. 
-[ Linear algebra definitions and how they relate to our system here ]
-[explain how a coordinate system is a basis with the axes’ being its members and the plane that the system is on is a vector space]
+\begin{figure}
+	\includegraphics[width=\linewidth]{rotation_difference.jpg}
+	\caption{The same vector represented by the coordinates [$\frac{1}{\sqrt2}$, $\frac{1}{\sqrt2}$] in the standard coordinate system is represented by the coordinates [0, 1] in a rotated coordinate system}
+	\label{fig:rotdiff}
+\end{figure}
 
-There are two differences in the coordinate systems: rotation and translation. A rotational difference creates an inconsistency in bases between the two coordinate systems. For example, the same vector represented by the coordinates [$\frac{1}{\sqrt2}$, $\frac{1}{\sqrt2}$] in one coordinate system can be represented by the coordinates [0, 1] in another (see Figure 1). Because the axes’ for both the Cozmo and the world coordinate systems are orthogonal, this implies that both coordinate systems have orthogonal bases. Rotation matrices can therefore be used as change of basis matrices $S_{\mathfrak{C}\rightarrow\mathfrak{W}}$ and $S_{\mathfrak{W}\rightarrow\mathfrak{C}}$ to convert between the two bases (see Equation 1). $\mathfrak{C}$ is the Cozmo basis; $\mathfrak{W}$ is the world basis; r is the difference between the rotation $\theta_w$ of the world origin and the rotation $\theta_c$ of the Cozmo origin.
-$$r = \theta_w - \theta_c$$
-\[
+There are two differences in the coordinate systems: rotation and translation. A rotational difference creates an inconsistency in bases between the two coordinate systems. For example, the same vector represented by the coordinates [$\frac{1}{\sqrt2}$, $\frac{1}{\sqrt2}$] in one coordinate system can be represented by the coordinates [0, 1] in another (see Figure \ref{fig:rotdiff}). Because the axes’ for both the Cozmo and the world coordinate systems are orthogonal, this implies that both coordinate systems have orthogonal bases \cite{Bretscher}
+. Rotation matrices can therefore be used as change of basis matrices $S_{\mathfrak{C}\rightarrow\mathfrak{W}}$ and $S_{\mathfrak{W}\rightarrow\mathfrak{C}}$ to convert between the two bases (Equation \ref{eq:s}). $\mathfrak{C}$ is the Cozmo basis; $\mathfrak{W}$ is the world basis; r is the difference between the rotation $\theta_w$ of the world origin and the rotation $\theta_c$ of the Cozmo origin (Equation \ref{eq:r}).
+\begin{equation} \label{eq:r}
+r = \theta_w - \theta_c
+\end{equation}
+\begin{equation} \label{eq:s}
 S_{\mathfrak{C}\rightarrow\mathfrak{W}}=
 \begin{bmatrix}
 cos(r) & sin(r) & 0 \\
 -sin(r) & cos(r) & 0 \\
 0 & 0 & 1
 \end{bmatrix}
-\]
-$S_{\mathfrak{C}\rightarrow\mathfrak{W}}$ changes a vector from Cozmo's basis to the world's basis, while its inverse $S_{\mathfrak{W}\rightarrow\mathfrak{C}}$ changes a vector from the world's basis to Cozmo's basis.
- $$[V]_\mathfrak{W} = S_{\mathfrak{C}\rightarrow\mathfrak{W}} \cdot [V]_\mathfrak{C}$$
- $$[V]_\mathfrak{C} = S_{\mathfrak{W}\rightarrow\mathfrak{C}} \cdot [V]_\mathfrak{W}$$
+\end{equation}
 
-When converting from Cozmo to world coordinates, the rotation of an object in world coordinates $\theta_w$ is calculated by adding the rotation difference r between the world and the Cozmo origin to the rotation of the object $\theta_c$ in Cozmo coordinates.
-$$\theta_w = \theta_c + r$$
-Similarly, when converting from world to Cozmo coordinates, the rotation of an object in Cozmo coordinates $\theta_c$ can be found by subtracting the rotation difference r from $\theta_w$ in world coordinates.
-$$\theta_c = \theta_w - r$$
+$S_{\mathfrak{C}\rightarrow\mathfrak{W}}$ changes a vector from Cozmo's basis to the world's basis (Equation \ref{eq:cw}), while its inverse $S_{\mathfrak{W}\rightarrow\mathfrak{C}}$ changes a vector from the world's basis to Cozmo's basis (Equation \ref{eq:wc}).
+\begin{equation} \label{eq:cw}
+[V]_\mathfrak{W} = S_{\mathfrak{C}\rightarrow\mathfrak{W}} \cdot [V]_\mathfrak{C}
+\end{equation}
+\begin{equation} \label{eq:wc}
+[V]_\mathfrak{C} = S_{\mathfrak{W}\rightarrow\mathfrak{C}} \cdot [V]_\mathfrak{W}
+\end{equation}
 
-The second inconsistency between the two coordinate systems is translation. The Cozmo origin is not at the same coordinates as the world origin, so a vector V also needs to be translated so that it is relative to the corresponding origin. This can be achieved by keeping track of the Cozmo origin's position relative to the world origin in the origin difference vector $V_d$. Figure 2 demonstrates the need for origin difference vector $V_d$ to convert between the two coordinate systems' origins. To find the origin difference vector $V_d$, vector $V_w$ representing Cozmo's pose relative to the world origin in world coordinates is acquired from the overhead camera localizer, and vector $V_c$ representing Cozmo's pose relative to Cozmo's origin in Cozmo coordinates is collected from the Cozmo robot. Then $V_c$ is multiplied by the change of basis matrix $S_{\mathfrak{C}\rightarrow\mathfrak{W}}$ to find vector $V_o$ representing Cozmo's pose relative to the Cozmo origin in world coordinates.
-$$V_o = S_{\mathfrak{C}\rightarrow\mathfrak{W}} \cdot V_c$$
-Finally, the position of Cozmo's origin in world coordinates, the origin difference vector $V_d$, can be calculated by subtracting vector $V_o$ representing Cozmo's pose relative to Cozmo's origin in world coordinates from vector $V_w$ representing Cozmo's pose relative to the world's origin in world coordinates (see Figure 33). 
-$$V_d = V_w - V_o$$
+When converting from Cozmo to world coordinates, the rotation of an object in world coordinates $\theta_w$ is calculated by adding the rotation difference r between the world and the Cozmo origin to the rotation of the object $\theta_c$ in Cozmo coordinates (Equation \ref{eq:rw}).
+\begin{equation} \label{eq:rw}
+	\theta_w = \theta_c + r
+\end{equation}
+Similarly, when converting from world to Cozmo coordinates, the rotation of an object in Cozmo coordinates $\theta_c$ can be found by subtracting the rotation difference r from $\theta_w$ in world coordinates (Equation \ref{eq:rc}).
+\begin{equation} \label{eq:rc}
+	\theta_c = \theta_w - r
+\end{equation}
 
-The change of basis matrices and the origin difference vector are used to transform to and from the two coordinate systems. To change a given vector $[V_{1w}]_\mathfrak{W}$ in world coordinates to $[V_{1c}]_\mathfrak{C}$ in Cozmo coordinates, first subtract $V_d$, the origin difference vector, so that the vector is relative to Cozmo's origin.
-$$[V_{1c}]_\mathfrak{W} =  [V_{1w}]_\mathfrak{W} - V_d$$
-Then multiply the vector $[V_{1c}]_\mathfrak{W}$ by the change of basis matrix $S_{\mathfrak{W}\rightarrow\mathfrak{C}}$, finishing the conversion.
-$$[V_{1c}]_\mathfrak{C} =  S_{\mathfrak{W}\rightarrow\mathfrak{C}} \cdot [V_{1c}]_\mathfrak{W}$$
+\begin{figure}
+	\includegraphics[width=\linewidth]{origin_difference.jpg}
+	\caption{The Cozmo origin is not at the same coordinates as the world origin, so a vector in either coordinate system also needs to be translated so that it is relative to the corresponding origin. This can be achieved by keeping track of the Cozmo origin's position relative to the world origin in the origin difference vector $V_d$}
+	\label{fig:oridiff}
+\end{figure}
+
+
+The second inconsistency between the two coordinate systems is translation. The Cozmo origin is not at the same coordinates as the world origin, so a vector V also needs to be translated so that it is relative to the corresponding origin. This can be achieved by keeping track of the Cozmo origin's position relative to the world origin in the origin difference vector $V_d$. Figure \ref{fig:oridiff} demonstrates the need for origin difference vector $V_d$ to convert between the two coordinate systems' origins. To find the origin difference vector $V_d$, vector $V_w$ representing Cozmo's pose relative to the world origin in world coordinates is acquired from the overhead camera localizer, and vector $V_c$ representing Cozmo's pose relative to Cozmo's origin in Cozmo coordinates is collected from the Cozmo robot. Then $V_c$ is multiplied by the change of basis matrix $S_{\mathfrak{C}\rightarrow\mathfrak{W}}$ to find vector $V_o$ representing Cozmo's pose relative to the Cozmo origin in world coordinates (Equation \ref{eq:oc}).
+\begin{equation} \label{eq:oc}
+	V_o = S_{\mathfrak{C}\rightarrow\mathfrak{W}} \cdot V_c
+\end{equation}
+Finally, the position of Cozmo's origin in world coordinates, the origin difference vector $V_d$, can be calculated by subtracting vector $V_o$ representing Cozmo's pose relative to Cozmo's origin in world coordinates from vector $V_w$ representing Cozmo's pose relative to the world's origin in world coordinates (see Figure 33)  (Equation \ref{eq:do}). 
+\begin{equation} \label{eq:do}
+	V_d = V_w - V_o
+\end{equation}
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{wc1.jpg}
+		\caption{Initial setup}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{wc2.jpg}
+		\caption{After subtracting origin difference vector}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{wc3.jpg}
+		\caption{After multiplying by the change of basis matrix}
+	\end{subfigure}
+	\caption{Changing from world to Cozmo coordinates}
+	\label{fig:wtoc}
+\end{figure}
+
+The change of basis matrices and the origin difference vector are used to transform to and from the two coordinate systems. To change a given vector $[V_{1w}]_\mathfrak{W}$ in world coordinates to $[V_{1c}]_\mathfrak{C}$ in Cozmo coordinates, first subtract $V_d$, the origin difference vector, so that the vector is relative to Cozmo's origin (Equation \ref{eq:v1c}). This whole process is visualized in Figure \ref{fig:wtoc}
+\begin{equation} \label{eq:v1c}
+	[V_{1c}]_\mathfrak{W} =  [V_{1w}]_\mathfrak{W} - V_d
+\end{equation}
+Then multiply the vector $[V_{1c}]_\mathfrak{W}$ by the change of basis matrix $S_{\mathfrak{W}\rightarrow\mathfrak{C}}$, finishing the conversion (Equation \ref{eq:v1c}).
+\begin{equation} \label{eq:v1c}
+	[V_{1c}]_\mathfrak{C} =  S_{\mathfrak{W}\rightarrow\mathfrak{C}} \cdot [V_{1c}]_\mathfrak{W}
+\end{equation}
 Our program will return the given object position $[V_{1c}]_\mathfrak{C}$ and rotation $\theta_c$ in Cozmo coordinates.
 
-Conversely, when changing an arbitrary vector $[V_{2c}]_\mathfrak{C}$ in Cozmo coordinates to $[V_{2w}]_\mathfrak{W}$ in world coordinates, first multiply $[V_{2c}]_\mathfrak{C}$ by the change of basis matrix $S_{\mathfrak{C}\rightarrow\mathfrak{W}}$.
-$$[V_{2c}]_\mathfrak{W} = S_{\mathfrak{C}\rightarrow\mathfrak{W}} \cdot [V_{2c}]_\mathfrak{C}$$
-The vector $[V_{2w}]_\mathfrak{W}$, representing the object pose relative to world origin in world coordinates, is then calculated by adding the origin difference vector, $V_d$.
-$$[V_{2w}]_\mathfrak{W} = [V_{2c}]_\mathfrak{W}+ V_d$$
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{cw1.jpg}
+		\caption{Initial setup}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{cw2.jpg}
+		\caption{After multiplying by the change of basis matrix}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{cw3.jpg}
+		\caption{After subtracting origin difference vector}
+	\end{subfigure}
+	\caption{Changing from Cozmo to world coordinates}
+	\label{fig:ctow}
+\end{figure}
+
+Conversely as visualized in Figure \ref{fig:ctow}, when changing an arbitrary vector $[V_{2c}]_\mathfrak{C}$ in Cozmo coordinates to $[V_{2w}]_\mathfrak{W}$ in world coordinates, first multiply $[V_{2c}]_\mathfrak{C}$ by the change of basis matrix $S_{\mathfrak{C}\rightarrow\mathfrak{W}}$ (Equation \ref{eq:v2c}).
+\begin{equation} \label{eq:v2c}
+	[V_{2c}]_\mathfrak{W} = S_{\mathfrak{C}\rightarrow\mathfrak{W}} \cdot [V_{2c}]_\mathfrak{C}
+\end{equation}
+The vector $[V_{2w}]_\mathfrak{W}$, representing the object pose relative to world origin in world coordinates, is then calculated by adding the origin difference vector, $V_d$ (Equation \ref{eq:v2w}).
+\begin{equation} \label{eq:v2w}
+	[V_{2w}]_\mathfrak{W} = [V_{2c}]_\mathfrak{W}+ V_d
+\end{equation}
 In this case, our program will also return the given object position $[V_{2w}]_\mathfrak{W}$ and rotation $\theta_w$ in world coordinates.
 
 \subsection{Update Robot Pose}
-Our code encapsulates the said functionality in a Camera Localizer class in Python. To not slow down the overall Soar and Cozmo program, the Camera Localizer spuns a separate thread. The update transformation and conversion functions are periodically called in the Rosie branch of CozmoSoar to calibrate robot pose. 
+Our code encapsulates the said functionality in a Camera Localizer class in Python. To not slow down the overall Soar and Cozmo program, the Camera Localizer spun a separate thread. The update transformation and conversion functions are periodically called in CozmoSoar to recalibrate the robot pose. Because the camera localizer is in a global coordinate frame, and does not rely on Cozmo odometry, the system is free from the cumulative odometry error. It then allows for CozmoSoar to conduct experiments and learn new tasks in an environment without having to account for drift.
 
 \section{Experiment}
-
+To test the efficacy of our apparatus, we devised an experiment of CozmoSoar running with and without the overhead camera localizer. In each experiment setting, a Cozmo robot needs to travel through a corridor and a gateway constructed by bricks marked with fiducials. On the other end of the corridor is a cube that Cozmo needs to pick up. Upon picking up the cube, Cozmo will then turn in place two and a half rotations. At the end of the rotation, theoretically, Cozmo should be facing towards its starting position or the Cozmo origin. Finally, Cozmo needs to turn to the proper rotation and travel back to its starting point without running into the gateway or hitting the corridor walls.
 
 \section{Results}
 
