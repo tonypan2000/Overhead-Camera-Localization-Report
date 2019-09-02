@@ -12,3 +12,41 @@
 \caption{The Cozmo origin is not at the same coordinates as the world origin, so a vector in either coordinate system also needs to be translated so that it is relative to the corresponding origin. This can be achieved by keeping track of the Cozmo origin's position relative to the world origin in the origin difference vector $V_d$}
 \label{fig:oridiff}
 \end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[h!]
+\centering
+\begin{subfigure}[b]{0.5\linewidth}
+\includegraphics[width=\linewidth]{wc1.jpg}
+\caption{Initial setup}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\linewidth}
+\includegraphics[width=\linewidth]{wc2.jpg}
+\caption{After subtracting origin difference vector}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\linewidth}
+\includegraphics[width=\linewidth]{wc3.jpg}
+\caption{After multiplying by the change of basis matrix}
+\end{subfigure}
+\caption{Changing from world to Cozmo coordinates}
+\label{fig:wtoc}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[h!]
+\centering
+\begin{subfigure}[b]{0.5\linewidth}
+\includegraphics[width=\linewidth]{cw1.jpg}
+\caption{Initial setup}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\linewidth}
+\includegraphics[width=\linewidth]{cw2.jpg}
+\caption{After multiplying by the change of basis matrix}
+\end{subfigure}
+\begin{subfigure}[b]{0.5\linewidth}
+\includegraphics[width=\linewidth]{cw3.jpg}
+\caption{After subtracting origin difference vector}
+\end{subfigure}
+\caption{Changing from Cozmo to world coordinates}
+\label{fig:ctow}
+\end{figure*}

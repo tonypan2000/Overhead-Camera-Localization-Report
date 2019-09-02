@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.7)  22 AUG 2019 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.7)  1 SEP 2019 22:49
 entering extended mode
 **./main.tex
 (main.tex
@@ -609,54 +609,68 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Try loading font information for U+txsyc on input line 19.
 ("C:\Users\tonyp\AppData\Local\Programs\MiKTeX 2.9\tex\latex\txfonts\utxsyc.fd"
 File: utxsyc.fd 2000/12/15 v3.1
-) [1{C:/Users/tonyp/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+)
+<navmap.jpg, id=1, 103.88812pt x 91.84312pt>
+File: navmap.jpg Graphic file (type jpg)
+<use navmap.jpg>
+Package pdftex.def Info: navmap.jpg  used on input line 28.
+(pdftex.def)             Requested size: 103.88786pt x 91.84288pt.
+ [1{C:/Users/tonyp/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-]
-[2]
-<rotation_difference.jpg, id=12, 381.67593pt x 353.82187pt>
+ <./navmap.jpg>] [2]
+<rotation_difference.jpg, id=13, 381.67593pt x 353.82187pt>
 File: rotation_difference.jpg Graphic file (type jpg)
 <use rotation_difference.jpg>
-Package pdftex.def Info: rotation_difference.jpg  used on input line 59.
+Package pdftex.def Info: rotation_difference.jpg  used on input line 68.
 (pdftex.def)             Requested size: 241.74324pt x 224.1021pt.
-<origin_difference.jpg, id=13, 685.8122pt x 390.70969pt>
+<origin_difference.jpg, id=14, 685.8122pt x 390.70969pt>
 File: origin_difference.jpg Graphic file (type jpg)
 <use origin_difference.jpg>
-Package pdftex.def Info: origin_difference.jpg  used on input line 96.
+Package pdftex.def Info: origin_difference.jpg  used on input line 105.
 (pdftex.def)             Requested size: 241.74324pt x 137.7222pt.
  [3 <./rotation_difference.jpg> <./origin_difference.jpg>]
-<wc1.jpg, id=21, 457.71pt x 474.27188pt>
+<wc1.jpg, id=22, 457.71pt x 474.27188pt>
 File: wc1.jpg Graphic file (type jpg)
 <use wc1.jpg>
-Package pdftex.def Info: wc1.jpg  used on input line 114.
+Package pdftex.def Info: wc1.jpg  used on input line 123.
 (pdftex.def)             Requested size: 120.87161pt x 125.24pt.
-<wc2.jpg, id=22, 389.95688pt x 373.395pt>
+<wc2.jpg, id=23, 389.95688pt x 373.395pt>
 File: wc2.jpg Graphic file (type jpg)
 <use wc2.jpg>
-Package pdftex.def Info: wc2.jpg  used on input line 118.
+Package pdftex.def Info: wc2.jpg  used on input line 127.
 (pdftex.def)             Requested size: 120.87161pt x 115.73416pt.
-<wc3.jpg, id=23, 384.6872pt x 371.13657pt>
+<wc3.jpg, id=24, 384.6872pt x 371.13657pt>
 File: wc3.jpg Graphic file (type jpg)
 <use wc3.jpg>
-Package pdftex.def Info: wc3.jpg  used on input line 122.
+Package pdftex.def Info: wc3.jpg  used on input line 131.
 (pdftex.def)             Requested size: 120.87161pt x 116.61415pt.
-<cw1.jpg, id=24, 387.69844pt x 426.09187pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<cw1.jpg, id=25, 387.69844pt x 426.09187pt>
 File: cw1.jpg Graphic file (type jpg)
 <use cw1.jpg>
-Package pdftex.def Info: cw1.jpg  used on input line 142.
+Package pdftex.def Info: cw1.jpg  used on input line 151.
 (pdftex.def)             Requested size: 120.87161pt x 132.8413pt.
-<cw2.jpg, id=25, 393.72093pt x 378.66469pt>
+<cw2.jpg, id=26, 393.72093pt x 378.66469pt>
 File: cw2.jpg Graphic file (type jpg)
 <use cw2.jpg>
-Package pdftex.def Info: cw2.jpg  used on input line 146.
+Package pdftex.def Info: cw2.jpg  used on input line 155.
 (pdftex.def)             Requested size: 120.87161pt x 116.24658pt.
-<cw3.jpg, id=26, 395.97937pt x 375.65344pt>
+<cw3.jpg, id=27, 395.97937pt x 375.65344pt>
 File: cw3.jpg Graphic file (type jpg)
 <use cw3.jpg>
-Package pdftex.def Info: cw3.jpg  used on input line 150.
+Package pdftex.def Info: cw3.jpg  used on input line 159.
 (pdftex.def)             Requested size: 120.87161pt x 114.66296pt.
- [4 <./wc1.jpg> <./wc2.jpg> <./wc3.jpg> <./cw1.jpg> <./cw2.jpg> <./cw3.jpg>] (m
-ain.bbl
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./wc1.jpg> <./wc2.jpg> <./wc3.jpg>] (main.bbl
 LaTeX Font Info:    Try loading font information for T1+txtt on input line 252.
 
 
@@ -664,23 +678,23 @@ LaTeX Font Info:    Try loading font information for T1+txtt on input line 252.
 File: t1txtt.fd 2000/12/15 v3.1
 ))
 - LAST -
-Extra skip:81.95906pt
-Left:476.56757pt/1.9485pt
-Right:395.09001pt/1.467pt
-Output:462.32878pt
- [5] (main.aux)
+Extra skip:21.76025pt
+Left:564.50253pt/2.165pt
+Right:543.44028pt/1.467pt
+Output:564.9714pt
+ [5 <./cw1.jpg> <./cw2.jpg> <./cw3.jpg>] (main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6206 strings out of 492972
- 89045 string characters out of 3126623
- 177076 words of memory out of 3000000
- 9919 multiletter control sequences out of 15000+200000
+ 6212 strings out of 492972
+ 89126 string characters out of 3126623
+ 177084 words of memory out of 3000000
+ 9924 multiletter control sequences out of 15000+200000
  45084 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,9n,46p,1065b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,9n,40p,1065b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/r
 txi.pfb><C:/Users/tonyp/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tx
@@ -693,9 +707,9 @@ grams/MiKTeX 2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/tonyp/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/tonyp/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/tonyp/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 446349 bytes).
+Output written on main.pdf (5 pages, 469757 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -21,7 +21,16 @@
 \section{Introduction}
 Intelligent robots need a navigation map of their surroundings in order to efficiently travel and complete tasks in their local environment. In simulations, the exact location of a robot is usually consistent with that of the robot’s own navigation maps. Physical robots, however, can introduce odometry error into the mapping process. Odometry is calculating relative position based on the measurements of sensorimotor data. While odometry provides easily accessible real-time robot pose, its accuracy is dependent on if the wheel revolutions measured by the encoders can be fully translated into linear displacement relative to the ground \cite{Borenstein}.
 
-For our project, Anki’s Cozmo robots are used to present a method of correcting odometry error in mobile robots. Cozmo is a fist-sized robot capable of exploring unknown environments and interacting with cubes. It builds a two-dimensional navigation memory map (nav map) of its surroundings as it travels. The nav map is built mostly based on where Cozmo’s camera picks up the objects and where Cozmo detects drops and visible edges. Unlike standard occupancy maps, which only compute the probability of a grid space being occupied by an object, the nav map also annotates the type of object in the occupancy grid. The nav map is stored as a quad-tree, in which leaf nodes hold the contents such as cubes and chargers, and all other nodes split into four children. Child node indices are stored in the x, y orientation shown in the figure \cite{Anki}.
+For our project, Anki’s Cozmo robots are used to present a method of correcting odometry error in mobile robots. Cozmo is a fist-sized robot capable of exploring unknown environments and interacting with cubes. It builds a two-dimensional navigation memory map (nav map) of its surroundings as it travels. The nav map is built mostly based on where Cozmo’s camera picks up the objects and where Cozmo detects drops and visible edges. Unlike standard occupancy maps, which only compute the probability of a grid space being occupied by an object, the nav map also annotates the type of object in the occupancy grid. The nav map is stored as a quad-tree, in which leaf nodes hold the contents such as cubes and chargers, and all other nodes split into four children. Child node indices are stored in the x, y orientation shown in figure \ref{fig:navmap} \cite{Anki}.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=1]{navmap.jpg}
+	\end{center}
+	\caption{A node in the navmap.
+		Leaf nodes contain content, all other nodes are split into 4 equally sized children. Child node indices are stored in the following X,Y orientation:}
+	\label{fig:navmap}
+\end{figure}
 
 In addition to the nav map, Cozmo relies on odometry to estimate its position and rotation (Cozmo pose) as it travels. Cozmo uses a right-handed coordinate system, in which the y-axis is to the left of the x-axis, and counterclockwise rotation is considered positive. When first initialized, Cozmo recognizes its current pose as the Cozmo origin, such that its x, y, z, rotation, pitch, and yaw are all zeros, and the direction it faces towards is the positive x axis. 
 
